@@ -36,7 +36,10 @@ public class AreopuertoService implements IService<Areopuertos, AreopuertosDto> 
             areopuerto.setEstado(t.getEstado());
             areopuerto.setPais(t.getPais());
             areopuerto.setHorasVuelo(t.getHorasVuelo());
+            if (t.getId() != null) {
+                areopuerto.setId(t.getId());
 
+            }
             areopuertoDao.save(areopuerto);
         } catch (Exception e) {
             throw new RuntimeException(e);

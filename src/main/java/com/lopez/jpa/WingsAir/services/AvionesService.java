@@ -29,12 +29,16 @@ public class AvionesService implements IService<Aviones, AvionesDto> {
 
     @Override
     public void save(AvionesDto t) {
+        System.out.println("-----------------" + t.getCapacidadPasajeros());
         Aviones aviones = new Aviones();
         aviones.setCodigoAvion(t.getCodigoAvion());
         aviones.setTipoAvion(t.getTipoAvion());
         aviones.setHorasVuelo(t.getHorasVuelo());
         aviones.setCapacidadPasajeros(t.getCapacidadPasajeros());
+        if (t.getId() != null) {
+            aviones.setId(t.getId());
 
+        }
         avionesDao.save(aviones);
 
     }

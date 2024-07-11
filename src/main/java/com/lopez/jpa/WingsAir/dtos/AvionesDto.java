@@ -10,7 +10,7 @@ public class AvionesDto {
     private String codigoAvion;
     private TipoAviones tipoAvion;
     private LocalTime horasVuelo;
-    private int capacidadPasajeros;
+    private Integer capacidadPasajeros;
 
     public Long getId() {
         return id;
@@ -44,11 +44,11 @@ public class AvionesDto {
         this.horasVuelo = horasVuelo;
     }
 
-    public int getCapacidadPasajeros() {
+    public Integer getCapacidadPasajeros() {
         return capacidadPasajeros;
     }
 
-    public void setCapacidadPasajeros(int capacidadPasajeros) {
+    public void setCapacidadPasajeros(Integer capacidadPasajeros) {
         this.capacidadPasajeros = capacidadPasajeros;
     }
 

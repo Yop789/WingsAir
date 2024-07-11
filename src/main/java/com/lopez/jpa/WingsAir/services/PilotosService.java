@@ -35,6 +35,11 @@ public class PilotosService implements IService<Pilotos, PilotoDto> {
         pilotos.setSexo(t.getSexo());
         pilotos.setHorasVuelo(t.getHorasVuelo());
 
+        if (t.getId() != null) {
+            pilotos.setId(t.getId());
+
+        }
+
         pilotosDao.save(pilotos);
     }
 
